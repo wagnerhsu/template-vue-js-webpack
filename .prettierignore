@@ -1,0 +1,12 @@
+# Ignore artifacts:
+build
+coverage
+dist
+.vscode
+node_modules
+
+# Ignore all HTML files:
+*.pdf
+package-lock.json
+pnpm-lock.yaml
+README.*.md
