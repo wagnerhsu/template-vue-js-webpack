@@ -1,8 +1,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import { Button, DatePicker } from 'ant-design-vue';
+import { Button, DatePicker, Divider, Grid, Tooltip } from 'ant-design-vue';
+import { Col, Row } from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 const app = createApp(App);
-app.use(Button).use(DatePicker);
+app.use(Button).use(DatePicker).use(Divider).use(Grid).use(Tooltip);
+app.use(Col).use(Row);
 app.use(router).mount('#app');

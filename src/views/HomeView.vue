@@ -3,16 +3,27 @@
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
-  <Button type="primary">
-    Primary Button using Button rather than a-button
-  </Button>
+  <Tooltip placement="topLeft" title="Prompt Text">
+    <Button type="primary">
+      Primary Button using Button rather than a-button
+    </Button>
+  </Tooltip>
   <a-button type="primary" @click="info">Primary Button</a-button>
   <a-date-picker v-model:value="value1" />
+  <div>
+    <a-divider orientation="left">Normal</a-divider>
+    <Row type="flex">
+      <Col :span="6" :order="4">1 col-order-4</Col>
+      <Col :span="6" :order="3">2 col-order-3</Col>
+      <Col :span="6" :order="2">3 col-order-2</Col>
+      <a-col :span="6" :order="1">4 col-order-1</a-col>
+    </Row>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { Button, message } from 'ant-design-vue';
+import { Button, message, Tooltip, Col, Row } from 'ant-design-vue';
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 const value1 = ref();
