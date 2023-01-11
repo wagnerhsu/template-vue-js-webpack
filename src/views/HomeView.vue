@@ -19,15 +19,30 @@
       <a-col :span="6" :order="1">4 col-order-1</a-col>
     </Row>
   </div>
+  <a-divider orientation="center"></a-divider>
+  <a-button type="primary" @click="confirmTest">ConfirmTest</a-button>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { Button, message, Tooltip, Col, Row } from 'ant-design-vue';
+import { Button, message, Tooltip, Col, Row, Modal } from 'ant-design-vue';
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 const value1 = ref();
 const info = () => {
   message.info('This is a normal message');
+};
+const confirmTest = () => {
+  Modal.confirm({
+    title: '重要提示：', //标题
+    class: 'nextMonth', //类名
+    icon: '', //可以更换页面展示图标
+    centered: true, //页面居中位置
+    content: '请确认您 XXXX ！',
+    onOk: () => {
+      //点击确认时的执行
+      alert('Ok');
+    },
+  });
 };
 </script>
