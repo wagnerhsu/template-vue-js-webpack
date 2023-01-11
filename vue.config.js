@@ -3,7 +3,8 @@ module.exports = defineConfig({
   transpileDependencies: true,
   pluginOptions: {
     webpackBundleAnalyzer: {
-      openAnalyzer: true,
+      openAnalyzer: false,
+      analyzerPort: 'auto',
     },
   },
 });

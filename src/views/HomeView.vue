@@ -21,6 +21,8 @@
   </div>
   <a-divider orientation="center"></a-divider>
   <a-button type="primary" @click="confirmTest">ConfirmTest</a-button>
+  <a-divider orientation="center"></a-divider>
+  <StepBackwardOutlined />
 </template>
 
 <script setup>

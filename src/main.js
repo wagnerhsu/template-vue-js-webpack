@@ -22,4 +22,11 @@ app.use(Col).use(Row);
 app.config.globalProperties.$message = message;
 app.config.globalProperties.$confirm = Modal.confirm;
 
+import * as Icons from '@ant-design/icons-vue';
+
+const icons = Icons;
+for (const i in icons) {
+  app.component(i, icons[i]);
+}
+
 app.use(router).mount('#app');
